@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rukundo Remy - Portfolio</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+        body {
+            font-family: 'Poppins', sans-serif;
+            margin: 0;
+            padding: 0;
+            line-height: 1.6;
+            color: #333;
+            background: linear-gradient(135deg, #f3f4f6, #ffffff);
+            overflow-x: hidden;
+        }
+        header {
+            background: #1a1a2e;
+            color: #fff;
+            padding: 2rem 0;
+            text-align: center;
+            position: relative;
+        }
+        header img {
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            object-fit: cover;
+            margin-bottom: 1rem;
+        }
+        header h1 {
+            margin: 0;
+            font-size: 2.5rem;
+        }
+        header p {
+            margin-top: 0.5rem;
+            font-size: 1.2rem;
+            font-style: italic;
+        }
+        nav {
+            text-align: center;
+            margin: 1rem 0;
+        }
+        nav a {
+            color: #1a1a2e;
+            text-decoration: none;
+            margin: 0 1.5rem;
+            font-size: 1.1rem;
+            font-weight: bold;
+            position: relative;
+        }
+        nav a:hover {
+            color: #e94560;
+        }
+        nav a::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            background: #e94560;
+            left: 50%;
+            bottom: -5px;
+            transition: all 0.3s ease;
+        }
+        nav a:hover::after {
+            width: 100%;
+            left: 0;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 2rem auto;
+            padding: 1.5rem;
+            background: #fff;
+            border-radius: 8px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        }
+        .section {
+            margin-bottom: 2.5rem;
+            animation: fadeInUp 1s ease;
+        }
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        .section h2 {
+            border-bottom: 3px solid #1a1a2e;
+            padding-bottom: 0.5rem;
+            font-size: 2rem;
+        }
+        .projects {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 1.5rem;
+        }
+        .project {
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            padding: 1.5rem;
+            background: #f9f9f9;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .project:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+        }
+        .project h3 {
+            margin-top: 0;
+            font-size: 1.5rem;
+            color: #e94560;
+        }
+        .project p {
+            font-size: 1rem;
+            line-height: 1.4;
+        }
+        footer {
+            text-align: center;
+            padding: 1.5rem 0;
+            background: #1a1a2e;
+            color: #fff;
+            margin-top: 3rem;
+        }
+        .contact {
+    text-align: center;
+    background: #16213e;
+    color: #fff;
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+.contact h2 {
+    font-size: 2rem;
+    color: #e94560;
+    margin-bottom: 1rem;
+}
+
+.contact p {
+    font-size: 1.2rem;
+    margin: 0.5rem 0;
+}
+
+.contact .contact-details p {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    font-size: 1.1rem;
+}
+
+.contact a {
+    color: #e94560;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.contact a:hover {
+    text-decoration: underline;
+}
+
+.contact i {
+    color: #e94560;
+    font-size: 1.2rem;
+}
+
+        .languages ul {
+            list-style: none;
+            padding: 0;
+        }
+        .languages ul li {
+            background: #f3f4f6;
+            padding: 0.5rem 1rem;
+            margin: 0.5rem 0;
+            border-radius: 5px;
+            border: 1px solid #ddd;
+            transition: transform 0.3s ease;
+        }
+        .languages ul li:hover {
+            transform: scale(1.05);
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <img src="me.png" alt="Rukundo Remy">
+        <h1>Rukundo Remy</h1>
+        <p>Software Developer | Cybersecurity Enthusiast | IT Specialist</p>
+    </header>
+
+    <nav>
+        <a href="#about">About</a>
+        <a href="#projects">Projects</a>
+        <a href="#education">Education</a>
+        <a href="#certificates">Certificates</a>
+        <a href="#experience">Experience</a>
+        <a href="#languages">Languages</a>
+        <a href="#contact">Contact</a>
+    </nav>
+
+    <div class="container">
+        <section id="about" class="section">
+            <h2>About Me</h2>
+            <p>Hello! I am Rukundo Remy, a passionate software developer and IT specialist with a background in Industrial IT. I specialize in creating user-friendly websites, cybersecurity solutions, and IoT systems. I am fluent in English and Kinyarwanda, with beginner-level French.</p>
+        </section>
+
+        <section id="projects" class="section">
+            <h2>Projects</h2>
+            <div class="projects">
+                <div class="project">
+                    <h3>Jewelry E-Commerce Website</h3>
+                    <p>Developed "Sparkle Jewelry," a platform for showcasing and selling jewelry with secure payment options and an intuitive admin panel.</p>
+                </div>
+                <div class="project">
+                    <h3>IPsec Auditing & Monitoring App</h3>
+                    <p>An application for auditing and monitoring network systems with a focus on IPsec security protocols.</p>
+                </div>
+                <div class="project">
+                    <h3>IoT-Based Flood Detection System</h3>
+                    <p>Designed an IoT system for real-time flood detection and avoidance to mitigate disaster impacts.</p>
+                </div>
+                <div class="project">
+                    <h3>Inventory Management System</h3>
+                    <p>Created a system for Horizon Sopyrwa Ltd to track and manage inventory effectively.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="education" class="section">
+            <h2>Education</h2>
+            <p>Bachelor's Degree in Industrial IT - INES Ruhengeri</p>
+            <p>Diploma in Software Development</p>
+        </section>
+
+        <section id="certificates" class="section">
+            <h2>Certificates</h2>
+            <ul>
+                <li>SkillsBuild Platform - Various IT Certifications</li>
+                <li>Advanced Java Programming Certificate</li>
+                <li>PHP and Web Development Proficiency</li>
+            </ul>
+        </section>
+
+        <section id="experience" class="section">
+            <h2>Experience</h2>
+            <p><strong>UNILAK (Intern)</strong> - Debugging platforms and computer maintenance.</p>
+            <p><strong>Horizon Sopyrwa Ltd (Intern)</strong> - Developed an inventory management system.</p>
+        </section>
+
+        <section id="languages" class="section">
+            <h2>Programming Languages</h2>
+            <div class="languages">
+                <ul>
+                    <li>PHP</li>
+                    <li>Java</li>
+                    <li>Python</li>
+                    <li>JavaScript</li>
+                    <li>SQL</li>
+                    <li>React.js</li>
+                    <li>Vue.js</li>
+                    <li>Docker</li>
+                <li>Kubernetes</li>
+                <li>TensorFlow</li>
+            </ul>
+        </section>
+
+        
+
+        
+
+       <section id="contact" class="section contact">
+    <h2>Contact</h2>
+    <p>You can reach out for collaboration or inquiries:</p>
+    <div class="contact-details">
+        <p><i class="fas fa-envelope"></i> Email: <a href="mailto:remyrukundo664@gmail.com">remyrukundo664@gmail.com</a></p>
+        <p><i class="fas fa-phone"></i> Phone: <a href="tel:+250789112862">+250789112862</a></p>
+        <p><i class="fab fa-linkedin"></i> LinkedIn: <a href="https://www.linkedin.com/in/rukundo-remy-oars" target="_blank">www.linkedin.com/in/rukundo-remy-oars</a></p>
+    </div>
+</section>
+
+    </div>
+
+    <footer>
+        <p>&copy; 2024 Rukundo Remy. All Rights Reserved.</p>
+    </footer>
+</body>
+</html>
